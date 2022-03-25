@@ -6,7 +6,7 @@ function init() {
 
 async function loadData() {
   const response = await fetch(
-    "http://evvs.me/wp-bikesite/wp-json/wp/v2/bike?_embed"
+    "https://evvs.me/wp-bikesite/wp-json/wp/v2/bike?_embed"
   );
   console.log("response2", response);
   const bikeData = await response.json();
