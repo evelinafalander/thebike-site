@@ -15,10 +15,9 @@ body {
 /*HEADER*/
 .logo {
   background-image: url(imgs/logo.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   width: 40%;
-  height: 30%;
   aspect-ratio: 6/1;
   margin: 1rem 0 1rem 1rem;
 }
@@ -42,7 +41,7 @@ a:hover {
 }
 /*SECTION BIKE CARD*/
 .brandName h3 {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-family: sans-serif;
   color: var(--grey-text);
 }
@@ -59,7 +58,7 @@ a:hover {
   margin: 1.5rem;
 }
 .bikeCard img {
-  max-width: 100%;
+  width: 100%;
 }
 /*BIKE INFO*/
 .bikeInfo {
@@ -96,6 +95,7 @@ button {
   font-size: 0.9rem;
   align-self: center;
   width: 150px;
+  font-weight: 600;
 }
 button:hover {
   color: white;
@@ -103,17 +103,39 @@ button:hover {
 }
 
 /*DESKTOP VIEW*/
+@media screen and (min-width: 500px) {
+  .logo {
+    width: 30%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .logo {
     width: 15%;
-    margin-top: 2rem 0;
+    margin: 2rem 0 1rem 1.3rem;
   }
   .brands {
     display: flex;
     gap: 2rem;
+    margin-left: 0.5rem;
   }
   main {
+    padding-top: 1rem;
+    margin: 1rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  header {
+    margin: 0 1rem;
+  }
+  button {
+    width: 70px;
+    font-size: 0.5rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  button {
+    width: 130px;
+    font-size: 0.9rem;
   }
 }
